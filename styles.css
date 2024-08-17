@@ -9,14 +9,15 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    background-color: white;
-    color: black;
+    background-color: #008dda; /* Navbar background color */
+    color: black; /* Text color in navbar */
     height: 4.5rem;
 }
 
 nav .logo {
     font-size: 2.5rem;
     cursor: pointer;
+    color: black; /* Logo color */
 }
 
 nav ul {
@@ -30,40 +31,96 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: black;
+    color: black; /* Navbar links color */
     font-size: 1.75rem;
     line-height: 4.5rem;
 }
 
 nav ul li a:hover {
     text-decoration: underline;
-    color: blue;
+    color: #41c9e2; /* Hover state for navbar links */
 }
 
-main{
-    background-color: gray;
+main {
+    background-color: #41c9e2; /* Main background color */
 }
 
 .profile {
-    background-color: white;
+    background-color: #bec6a0; /* Profile section background color */
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+.about_me {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #ace2e1; /* Updated section background color */
+    border-radius: 8px;
+    margin: auto;
+    height: 100vh;
+}
+
 .profile-container {
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #41c9e2; /* Updated section background color */
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow for better visual separation */
 }
 
 .profile-container .profile-image {
-    max-height: 50vh;
+    max-height: 55vh;
     width: auto;
-    border-radius: 50%;
+    border-radius: 10%;
     object-fit: cover;
+    border: 5px solid #008dda; /* Profile image border color */
 }
 
 .profile-name {
     font-size: 2rem;
     margin-top: 1rem;
+    color: black; /* Profile name color */
+}
+
+.information {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    font-size: 14px;
+    color: black; /* Information text color */
+    background-color: #41c9e2; /* Updated section background color */
+    margin-left: 20px;
+    border-radius: 1rem;
+}
+
+.about_me h2 {
+    font-size: 24px;
+    color: black; /* Heading text color */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.about_me p {
+    font-size: 20px;
+    line-height: 1.6;
+    text-align: center;
+    margin: 20px;
+    color: black; /* Paragraph text color */
+}
+
+.information span {
+    padding: 5px 10px;
+    background-color: #008dda; /* Information span background color */
+    border-radius: 4px;
+    text-align: center;
+    font-size: 1.15rem;
+    color: black; /* Span text color */
+    margin-bottom: 1rem;
 }
