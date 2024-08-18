@@ -9,15 +9,15 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    background-color: #008dda; /* Navbar background color */
-    color: black; /* Text color in navbar */
+    /* background-color: #008dda; */ 
+    color: black;
     height: 4.5rem;
 }
 
 nav .logo {
     font-size: 2.5rem;
     cursor: pointer;
-    color: black; /* Logo color */
+    color: black;
 }
 
 nav ul {
@@ -31,22 +31,22 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: black; /* Navbar links color */
+    color: black;
     font-size: 1.75rem;
     line-height: 4.5rem;
 }
 
-nav ul li a:hover {
+/* nav ul li a:hover {
     text-decoration: underline;
-    color: #41c9e2; /* Hover state for navbar links */
-}
+    color: #41c9e2;
+} */
 
 main {
-    background-color: #41c9e2; /* Main background color */
+    /* background-color: #41c9e2; */
 }
 
 .profile {
-    background-color: #bec6a0; /* Profile section background color */
+    /* background-color: #bec6a0; */ 
     height: 100vh;
     display: flex;
     align-items: center;
@@ -58,7 +58,7 @@ main {
     align-items: center;
     justify-content: center;
     padding: 20px;
-    background-color: #ace2e1; /* Updated section background color */
+    /* background-color: #ace2e1; */ 
     border-radius: 8px;
     margin: auto;
     height: 100vh;
@@ -68,10 +68,10 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #41c9e2; /* Updated section background color */
+    /* background-color: #41c9e2; */ 
     padding: 2rem;
     border-radius: 1rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow for better visual separation */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .profile-container .profile-image {
@@ -79,13 +79,13 @@ main {
     width: auto;
     border-radius: 10%;
     object-fit: cover;
-    border: 5px solid #008dda; /* Profile image border color */
+    /* border: 5px solid #008dda; */
 }
 
 .profile-name {
     font-size: 2rem;
     margin-top: 1rem;
-    color: black; /* Profile name color */
+    color: black;
 }
 
 .information {
@@ -94,15 +94,15 @@ main {
     justify-content: center;
     gap: 15px;
     font-size: 14px;
-    color: black; /* Information text color */
-    background-color: #41c9e2; /* Updated section background color */
+    color: black;
+    /* background-color:   #41c9e2;  */
     margin-left: 20px;
     border-radius: 1rem;
 }
 
 .about_me h2 {
     font-size: 24px;
-    color: black; /* Heading text color */
+    color: black;
     text-align: center;
     margin-bottom: 20px;
 }
@@ -112,15 +112,167 @@ main {
     line-height: 1.6;
     text-align: center;
     margin: 20px;
-    color: black; /* Paragraph text color */
+    color: black;
 }
 
 .information span {
     padding: 5px 10px;
-    background-color: #008dda; /* Information span background color */
+    /* background-color: #008dda; */ 
     border-radius: 4px;
     text-align: center;
     font-size: 1.15rem;
-    color: black; /* Span text color */
+    color: black;
     margin-bottom: 1rem;
+}
+
+.skills{
+    width: 100%;
+    color: white;
+}
+
+.skills .technical-skills{
+    background-color: white;
+    color: black;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.skills .technical-skills h2{
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.skills-list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.technical-skills-list {
+    list-style-type: none;
+    width: 45%;
+    margin: 1rem;
+    box-sizing: border-box;
+}
+
+.skill-name {
+    display: flex;
+    padding: 1rem;
+}
+
+.skill-name span {
+    width: 50%;
+}
+
+.skill-name .right {
+    text-align: right;
+}
+
+.skill-progress {
+    display: flex;
+    padding: 0 1rem 1rem 1rem;
+}
+
+.skill-progress .progress {
+    width: 100%;
+    height: 20px;
+    border-radius: 1.5rem;
+    background-color: black;
+}
+
+
+.progress-bar-1, 
+.progress-bar-2, 
+.progress-bar-3, 
+.progress-bar-4,
+.progress-bar-5, 
+.progress-bar-6,
+.progress-bar-7, 
+.progress-bar-8, 
+.progress-bar-9, 
+.progress-bar-10,
+.progress-bar-11{
+    height: 20px;
+    background-color: green;
+    border-radius: 1.5rem;
+}
+
+.progress-bar-1{
+    width: 80%;
+}
+
+.progress-bar-2{
+    width: 76%;
+}
+
+.progress-bar-3 {
+    width: 10%; 
+}
+
+.progress-bar-4 {
+    width: 50%; 
+}
+
+.progress-bar-5 {
+    width: 36%; 
+}
+
+.progress-bar-6 {
+    width: 33%; 
+}
+
+.progress-bar-7 {
+    width: 61%; 
+}
+
+.progress-bar-8 {
+    width: 10%; 
+}
+
+.progress-bar-9 {
+    width: 10%; 
+}
+
+.progress-bar-10 {
+    width: 64%; 
+}
+
+.progress-bar-11 {
+    width: 10%; 
+}
+
+.soft-skills {
+    margin-bottom: 2rem;
+}
+
+.soft-skills h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: black;
+    font-size: 2.5rem;
+}
+
+.skills-list.soft-skills {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    padding: 0;
+    margin: 0;
+}
+
+.skills-list.soft-skills li {
+    list-style-type: none;
+    width: 45%;
+    background-color: white;
+    color: black;
+    margin: 1rem;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    font-size: 1.5rem;
 }
