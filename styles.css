@@ -276,3 +276,58 @@ main {
     box-sizing: border-box;
     font-size: 1.5rem;
 }
+
+.education {
+    display: block;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.education h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.education-item {
+    display: inline-block;
+    width: 49%;
+    height: auto;
+    padding: 20px;
+    /* background-color: #f9f9f9; */
+    border-radius: 8px;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.education-item:hover {
+    transform: translateY(-5px);
+}
+
+.education-details h3 {
+    font-size: 1.75rem;
+}
+
+.school-logo {
+    width: 150px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.school-logo:hover {
+    transform: scale(1.1);
+}
+
+
+
+.education-details {
+    padding: 10px;
+    font-size: 1.15rem;
+}
+
+.school-logo {
+    width: 150px;
+    margin-bottom: 10px;
+}
+
