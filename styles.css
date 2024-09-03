@@ -5,13 +5,23 @@
     scroll-behavior: smooth;
 }
 
+p{
+    font-size: 1.15rem;
+}
+
+nav, footer{
+    background-color: #F0EBE3;
+}
+
 nav {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    /* background-color: #008dda; */ 
     color: black;
-    height: 4.5rem;
+    height: 5.5rem;
+    position: sticky;
+    top: 0;
+    
 }
 
 nav .logo {
@@ -32,17 +42,26 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: black;
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     line-height: 4.5rem;
 }
 
-/* nav ul li a:hover {
-    text-decoration: underline;
-    color: #41c9e2;
-} */
+nav ul li a:hover {
+    border-bottom: 3.5px solid #D9CAB3; 
+}
+
+nav .contact{
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+
+nav .contact:hover{
+    background-color: #D9CAB3;
+    border-radius: 10px;
+}
 
 main {
-    /* background-color: #41c9e2; */
+    background-color: #F6F5F2;
 }
 
 .profile {
@@ -60,7 +79,6 @@ main {
     padding: 20px;
     /* background-color: #ace2e1; */ 
     border-radius: 8px;
-    margin: auto;
     height: 100vh;
 }
 
@@ -128,13 +146,15 @@ main {
 .skills{
     width: 100%;
     color: white;
+    padding: 5.5rem 0 2rem 0;
 }
 
 .skills .technical-skills{
-    background-color: white;
     color: black;
     width: 80%;
     margin: 0 auto;
+    padding: 1.15rem;
+    border-radius: 10px;
 }
 
 .skills .technical-skills h2{
@@ -156,6 +176,13 @@ main {
     width: 45%;
     margin: 1rem;
     box-sizing: border-box;
+    background-color: #F0EBE3;
+    border-radius: 10px;
+    padding: 0px 0.5rem;
+}
+
+.skills-list span{
+    font-size: 20px;
 }
 
 .skill-name {
@@ -180,9 +207,8 @@ main {
     width: 100%;
     height: 20px;
     border-radius: 1.5rem;
-    background-color: black;
+    background-color: #000;
 }
-
 
 .progress-bar-1, 
 .progress-bar-2, 
@@ -196,7 +222,7 @@ main {
 .progress-bar-10,
 .progress-bar-11{
     height: 20px;
-    background-color: green;
+    background-color: #87A96B;
     border-radius: 1.5rem;
 }
 
@@ -244,43 +270,10 @@ main {
     width: 10%; 
 }
 
-.soft-skills {
-    margin-bottom: 2rem;
-}
-
-.soft-skills h2 {
-    text-align: center;
-    margin-bottom: 1rem;
-    color: black;
-    font-size: 2.5rem;
-}
-
-.skills-list.soft-skills {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; 
-    padding: 0;
-    margin: 0;
-}
-
-.skills-list.soft-skills li {
-    list-style-type: none;
-    width: 45%;
-    background-color: white;
-    color: black;
-    margin: 1rem;
-    padding: 0.5rem 1rem;
-    text-align: center;
-    border-radius: 0.5rem;
-    box-sizing: border-box;
-    font-size: 1.5rem;
-}
-
 .education {
     display: block;
     text-align: center;
-    padding: 20px 0;
+    padding: 5.5rem 0 2rem 0;
 }
 
 .education h2 {
@@ -294,16 +287,16 @@ main {
     width: 49%;
     height: auto;
     padding: 20px;
-    /* background-color: #f9f9f9; */
     border-radius: 8px;
-    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
     margin-bottom: 20px;
     transition: transform 0.3s ease;
+    background-color: #F0EBE3;
+    vertical-align: top;
 }
 
-.education-item:hover {
+/* .education-item:hover {
     transform: translateY(-5px);
-}
+} */
 
 .education-details h3 {
     font-size: 1.75rem;
@@ -319,8 +312,6 @@ main {
     transform: scale(1.1);
 }
 
-
-
 .education-details {
     padding: 10px;
     font-size: 1.15rem;
@@ -331,3 +322,19 @@ main {
     margin-bottom: 10px;
 }
 
+.projects{
+    display: block;
+    background-color: red;
+    padding: 5.5rem 0 2rem 0;
+}
+
+.projects h2{
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+footer{
+    width: 100%;
+    text-align: center;
+    height: 50px;
+}
