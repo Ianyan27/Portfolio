@@ -34,6 +34,11 @@ nav .logo {
     font-weight: bold;
 }
 
+nav .logo a{
+    color: white;
+    text-decoration: none;
+}
+
 nav ul {
     list-style: none;
     display: flex;
@@ -41,27 +46,47 @@ nav ul {
 }
 
 nav ul li a {
-    color: #fff;
+    position: relative;
     text-decoration: none;
+    color: #f5f5f5;
     padding: 0.5rem;
-    transition: color 0.3s;
+    transition: color 0.3s ease;
 }
 
-nav ul li a.active {
-    color: #ffa500; /* Active color */
-    font-weight: bold;
-    border-bottom: 2px solid #ffa500; /* Optional underline for emphasis */
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0%;
+    height: 2px;
+    background-color: #ffa500; /* Color of the underline */
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+nav ul li a.active::after {
+    width: 100%;
+    left: 0%;
+}
+
+nav ul li a.active{
+    color: #ffa500;
 }
 
 nav ul li a:hover {
     color: #ffa500;
 }
 
-nav .contact {
+nav .contact, .contact-btn {
     background-color: #ffa500;
     padding: 0.5rem 1rem;
     border-radius: 5px;
     cursor: pointer;
+}
+
+.contact-btn{
+    width: 250px;
+    text-align: center;
 }
 
 main {
@@ -70,7 +95,6 @@ main {
 
 /* Section Styling for Fullscreen Effect */
 section {
-    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -165,20 +189,53 @@ section {
     text-align: left;
 }
 
+.skills-section {
+    background-color: #f9f9f9; /* Light background shade */
+    padding: 20px; /* Add some padding around the section */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem; /* Subtle shadow for depth */
+}
+
+.skills-section h3{
+    margin-bottom: 1rem;
+}
+
+/* Container for the progress bar */
+.skill-progress {
+    position: relative;
+    background-color: #ddd; /* Light gray for the background */
+    border-radius: 10px;
+    overflow: hidden;
+    height: 8px;
+    width: 100%;
+    margin-top: 8px;
+}
+
+/* Progress bar */
+.progress-bar {
+    height: 100%;
+    background-color: #ffa500; /* Match your theme color */
+    transition: width 0.4s ease-in-out; /* Smooth animation for dynamic updates */
+    border-radius: 10px;
+}
+
 /* Education Section */
 .education {
     margin-bottom: 2rem;
+    flex-direction: column;
 }
 
 .education-item {
     display: flex;
+    width: 50%;
     gap: 1rem;
     margin-bottom: 1.5rem;
     align-items: center;
 }
 
 .school-logo {
-    width: 50px;
+    width: 150px;
     height: 50px;
     object-fit: cover;
 }
