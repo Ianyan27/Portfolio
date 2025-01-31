@@ -37,6 +37,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 6rem 2rem;
 }
 
 .about-section {
@@ -49,36 +50,40 @@ section {
 /* Glassmorphic Card */
 .about-card {
     background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    padding: 30px;
+    backdrop-filter: blur(12px);
+    padding: 3rem;
     border-radius: 15px;
     border: 1px solid rgba(255, 255, 255, 0.2);
     text-align: center;
-    max-width: 450px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-    animation: floatAnimation 4s infinite alternate ease-in-out;
-
+    max-width: 700px; /* Increased width */
+    box-shadow: 0 8px 32px rgba(0, 255, 170, 0.2);
+    transition: transform 0.3s ease-in-out;
 }
+
 @keyframes floatAnimation {
     0% { transform: translateY(0px); }
     100% { transform: translateY(10px); }
 }
 
+.about-card:hover {
+    transform: translate(-5px);
+}
+
 /* Profile Image */
 .profile-img {
-    width: 120px;  /* Adjust for better visibility */
-    height: 120px;  /* Keep it same as width */
-    object-fit: cover;  /* Ensures no stretching */
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
     border-radius: 50%;
-    border: 3px solid white;
+    border: 4px solid white;
     margin-bottom: 15px;
 }
 
 
 /* Headings */
 h1 {
-    font-size: 28px;
-    font-weight: 600;
+    font-size: 32px;
+    font-weight: bold;
 }
 h1 span {
     color: #00ffcc;
@@ -86,14 +91,14 @@ h1 span {
 
 /* Subtitle */
 .subtitle {
-    font-size: 16px;
+    font-size: 18px;
     color: #b3b3b3;
 }
 
 /* Location */
 .location {
-    font-size: 14px;
-    margin-top: 5px;
+    font-size: 16px;
+    margin-top: 10px;
     color: #d4d4d4;
 }
 
@@ -101,16 +106,16 @@ h1 span {
 .buttons {
     margin-top: 20px;
     display: flex;
-    gap: 10px;
+    gap: 15px;
     justify-content: center;
 }
 
 /* Button Styling */
 .btn {
     text-decoration: none;
-    padding: 10px 15px;
-    border-radius: 8px;
-    font-size: 14px;
+    padding: 12px 18px;
+    border-radius: 10px;
+    font-size: 16px;
     font-weight: bold;
     display: inline-block;
     transition: 0.3s;
@@ -195,11 +200,12 @@ nav ul li a.active {
 
 /* Skills Section */
 #Skills {
-    min-height: auto; /* Forces it to fill the screen */
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-bottom: 50px;
+    align-items: center;
+    padding: 6rem 2rem; /* Increased padding */
+    text-align: center;
 }
 
 
@@ -213,7 +219,7 @@ nav ul li a.active {
     flex-direction: column;
     align-items: center;
     gap: 40px;
-    max-width: 800px;
+    max-width: 900px; /* Increased width */
     margin: auto;
 }
 
@@ -225,16 +231,15 @@ nav ul li a.active {
 
 /* Category Title */
 .skills-category h3 {
-    font-size: 22px;
+    font-size: 24px;
     color: #00ffcc;
     margin-bottom: 15px;
-    text-align: center;
 }
 
 /* Skill Cards Grid */
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Wider cards */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Wider cards */
     gap: 20px; /* Increase spacing */
     justify-content: center;
     align-items: center;
@@ -245,13 +250,13 @@ nav ul li a.active {
 /* Individual Skill Card */
 .skill-card {
     background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(12px);
     border: 1px solid rgba(255, 255, 255, 0.2);
-    padding: 15px;
-    border-radius: 10px;
+    padding: 20px;
+    border-radius: 12px;
     font-weight: bold;
     text-align: center;
-    box-shadow: 0px 5px 15px rgba(0, 255, 204, 0.1);
+    box-shadow: 0px 5px 15px rgba(0, 255, 204, 0.2);
     transition: transform 0.3s ease-in-out;
 }
 
@@ -265,39 +270,39 @@ nav ul li a.active {
 /* Education Section - Dark Mode */
 .education {
     text-align: center;
-    padding: 3rem 2rem;
+    padding: 6rem 2rem;
     color: #fff;
 }
 
 .timeline {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
-    max-width: 800px;
+    gap: 2rem;
+    max-width: 900px;
     margin: 1rem auto auto;
 }
 
 .timeline-item {
     display: flex;
     align-items: center;
-    gap: 1.5rem;
-    background: #1a1a1a; /* Darker card background */
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 255, 170, 0.2); /* Subtle neon glow */
+    gap: 2rem; /* Increased spacing */
+    background: #1a1a1a;
+    padding: 3rem;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0, 255, 170, 0.3);
     transition: transform 0.3s ease-in-out;
 }
 
 .timeline-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 0 15px rgba(0, 255, 170, 0.5); /* Enhanced glow on hover */
+    box-shadow: 0 0 18px rgba(0, 255, 170, 0.5);
 }
 
 .school-logo {
-    width: 80px;
+    width: 100px; /* Increased logo size */
     height: auto;
     object-fit: contain;
-    filter: brightness(1.2); /* Slightly brighten logos */
+    filter: brightness(1.2);
 }
 
 .timeline-content {
@@ -305,41 +310,40 @@ nav ul li a.active {
 }
 
 .timeline-content h3 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     color: #0ef; /* Cyan to match the modern neon style */
 }
 
 .timeline-content p {
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: #aaa; /* Light grey for readability */
-    margin-top: 0.3rem;
+    margin-top: 0.5rem;
 }
 
 /* Projects Section */
 .projects {
     text-align: center;
-    padding: 3rem;
-    background: #111;
+    padding: 6rem 2rem;
     color: white;
 }
 
-.projects h2 {
+.projects h2, #Skills h2, .education h2 {
     font-size: 2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
 }
 
 /* Project Card */
 .project-card {
     background: #1a1a1a;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 255, 170, 0.2);
-    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 0 12px rgba(0, 255, 170, 0.3);
+    padding: 3rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1.5rem;
-    max-width: 800px;
-    margin: auto;
+    gap: 2.5rem;
+    max-width: 1000px;
+    margin: 0 auto 4rem auto; /* Added bottom margin for spacing between projects */
     transition: transform 0.3s ease-in-out;
 }
 
@@ -351,11 +355,11 @@ nav ul li a.active {
 .carousel-container {
     position: relative;
     width: 100%;
-    max-width: 500px;
-    height: 300px; /* Set a fixed height for consistency */
+    max-width: 900px;
+    height: 500px; /* Maintain uniformity */
     overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 255, 170, 0.2);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 255, 170, 0.3);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -370,8 +374,8 @@ nav ul li a.active {
 .carousel img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensures images fit without distortion */
-    border-radius: 10px;
+    object-fit: contain; /* Ensures the entire image is visible without being cut */
+    border-radius: 12px;
 }
 
 /* Carousel Buttons */
@@ -382,45 +386,48 @@ nav ul li a.active {
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
-    padding: 10px;
+    padding: 12px;
     cursor: pointer;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
+    border-radius: 5px;
 }
 
 .prev {
-    left: 10px;
+    left: 15px;
 }
 
 .next {
-    right: 10px;
+    right: 15px;
 }
 
 /* Project Details */
 .project-details {
     text-align: center;
+    max-width: 850px;
 }
 
 .project-details h3 {
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: #0ef;
 }
 
 .project-details p {
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: #aaa;
-    margin-top: 0.3rem;
+    margin-top: 0.5rem;
 }
 
 /* Project Buttons */
 .project-links {
     display: flex;
-    gap: 1rem;
-    margin-top: 1rem;
+    gap: 1.2rem;
+    margin-top: 1.5rem;
 }
 
 .btn-primary, .btn-secondary {
-    padding: 0.7rem 1.5rem;
-    border-radius: 5px;
+    padding: 1rem 1.8rem;
+    font-size: 1rem;
+    border-radius: 8px;
     color: white;
     text-decoration: none;
     transition: background 0.3s;
@@ -443,31 +450,169 @@ nav ul li a.active {
 }
 
 
-@media (max-width: 768px) {
+/* 📱 Mobile (Smartphones - up to 480px) */
+@media (max-width: 480px) {
     .about-card {
-        max-width: 90%; /* Make it fit small screens */
+        max-width: 95%; 
         padding: 20px;
     }
     h1 {
-        font-size: 22px; /* Adjust font size */
+        font-size: 20px;
     }
     .buttons {
-        flex-direction: column; /* Stack buttons for better mobile view */
+        flex-direction: column;
     }
     .btn {
         width: 100%;
-        text-align: center;
     }
-    .skills-category {
-        text-align: center; /* Ensures mobile centering */
-    }
-    
     .skills-grid {
-        grid-template-columns: 1fr; /* Stack in a single column */
+        grid-template-columns: 1fr;
     }
-
-    .about-card {
-        max-width: 90%; /* Ensure it doesn't shrink too much */
-        padding: 30px;
+    .timeline-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 1.5rem;
+    }
+    .school-logo {
+        width: 60px; /* Reduce size for better mobile fitting */
+    }
+    .project-card {
+        max-width: 95%;
+        padding: 1.5rem;
+    }
+    .carousel-container {
+        height: 250px;
+    }
+    .project-details h3 {
+        font-size: 1.3rem;
+    }
+    .project-details p {
+        font-size: 0.9rem;
+    }
+    .btn-primary, .btn-secondary {
+        padding: 0.7rem 1.2rem;
+        font-size: 0.85rem;
     }
 }
+
+/* 📱 Tablets (480px - 768px) */
+@media (max-width: 768px) {
+    .about-card {
+        max-width: 90%;
+        padding: 30px;
+    }
+    h1 {
+        font-size: 24px;
+    }
+    .buttons {
+        flex-direction: column;
+    }
+    .skills-category {
+        text-align: center;
+    }
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* 2 columns on tablets */
+    }
+    .timeline-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 2rem;
+    }
+    .school-logo {
+        width: 80px;
+    }
+    .project-card {
+        max-width: 90%;
+        padding: 2rem;
+    }
+    .carousel-container {
+        height: 350px;
+    }
+    .project-details h3 {
+        font-size: 1.5rem;
+    }
+    .project-details p {
+        font-size: 1rem;
+    }
+    .btn-primary, .btn-secondary {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* 💻 Laptops & Medium Screens (768px - 1200px) */
+@media (max-width: 1200px) {
+    .about-card {
+        max-width: 80%;
+        padding: 3rem;
+    }
+    h1 {
+        font-size: 28px;
+    }
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Dynamic fitting */
+    }
+    .timeline {
+        max-width: 90%;
+    }
+    .timeline-item {
+        flex-direction: row;
+        align-items: center;
+        padding: 2.5rem;
+    }
+    .school-logo {
+        width: 90px;
+    }
+    .project-card {
+        max-width: 85%;
+        padding: 2.5rem;
+    }
+    .carousel-container {
+        height: 400px;
+    }
+    .project-details h3 {
+        font-size: 1.8rem;
+    }
+    .project-details p {
+        font-size: 1.1rem;
+    }
+}
+
+/* 🖥️ Large Screens & Ultra-wide Monitors (Above 1200px) */
+@media (min-width: 1200px) {
+    .about-card {
+        max-width: 70%;
+        padding: 4rem;
+    }
+    h1 {
+        font-size: 32px;
+    }
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+    .timeline {
+        max-width: 75%;
+    }
+    .timeline-item {
+        padding: 3rem;
+    }
+    .school-logo {
+        width: 100px;
+    }
+    .project-card {
+        max-width: 75%;
+        padding: 3rem;
+    }
+    .carousel-container {
+        height: 500px;
+    }
+    .project-details h3 {
+        font-size: 2rem;
+    }
+    .project-details p {
+        font-size: 1.2rem;
+    }
+}
+

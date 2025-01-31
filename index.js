@@ -46,24 +46,31 @@ document.querySelectorAll(".skill-card").forEach(card => {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-    let currentIndex = 0;
-    const slides = document.querySelectorAll(".carousel img");
-    const totalSlides = slides.length;
-    const carousel = document.querySelector(".carousel");
+    let carousels = document.querySelectorAll(".carousel-container");
 
-    function updateCarousel() {
-        const offset = -currentIndex * 100;
-        carousel.style.transform = `translateX(${offset}%)`;
-    }
+    carousels.forEach((container, index) => {
+        let carousel = container.querySelector(".carousel");
+        let slides = carousel.querySelectorAll("img");
+        let totalSlides = slides.length;
+        let currentIndex = 0;
 
-    document.querySelector(".prev").addEventListener("click", function () {
-        currentIndex = (currentIndex === 0) ? totalSlides - 1 : currentIndex - 1;
-        updateCarousel();
-    });
+        function updateCarousel() {
+            const offset = -currentIndex * 100;
+            carousel.style.transform = `translateX(${offset}%)`;
+        }
 
-    document.querySelector(".next").addEventListener("click", function () {
-        currentIndex = (currentIndex === totalSlides - 1) ? 0 : currentIndex + 1;
-        updateCarousel();
+        // Select buttons specific to the current carousel
+        let prevButton = container.querySelector(".prev");
+        let nextButton = container.querySelector(".next");
+
+        prevButton.addEventListener("click", function () {
+            currentIndex = (currentIndex === 0) ? totalSlides - 1 : currentIndex - 1;
+            updateCarousel();
+        });
+
+        nextButton.addEventListener("click", function () {
+            currentIndex = (currentIndex === totalSlides - 1) ? 0 : currentIndex + 1;
+            updateCarousel();
+        });
     });
 });
-
