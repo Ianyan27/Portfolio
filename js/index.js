@@ -14,26 +14,53 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
     const sections = document.querySelectorAll("section");
-    const navLinks = document.querySelectorAll("nav ul li a");
+    const navLinks = document.querySelectorAll(".nav-links li a");
 
-    window.addEventListener("scroll", () => {
-        let current = "";
+    function updateActiveLink() {
+        let currentSection = "";
 
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
+        sections.forEach((section) => {
+            const sectionTop = section.offsetTop - 250; // Adjust threshold before activating
             const sectionHeight = section.clientHeight;
-            if (pageYOffset >= sectionTop - sectionHeight / 3) {
-                current = section.getAttribute("id");
+            const sectionBottom = sectionTop + sectionHeight;
+
+            if (window.scrollY >= sectionTop && window.scrollY < sectionBottom - 150) {
+                currentSection = section.getAttribute("id");
             }
         });
 
-        navLinks.forEach(link => {
+        // Special case: If the user scrolls to the bottom, activate the last section (Contact)
+        if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 10) {
+            currentSection = "Contact";
+        }
+
+        navLinks.forEach((link) => {
             link.classList.remove("active");
-            if (link.getAttribute("href").substring(1) === current) {
+            if (link.getAttribute("href").substring(1) === currentSection) {
                 link.classList.add("active");
             }
         });
+    }
+
+    window.addEventListener("scroll", updateActiveLink);
+
+    // Smooth scrolling for navbar links
+    navLinks.forEach((link) => {
+        link.addEventListener("click", function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute("href").substring(1);
+            const targetElement = document.getElementById(targetId);
+
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 60, // Adjust for navbar height
+                    behavior: "smooth",
+                });
+            }
+        });
     });
+
+    updateActiveLink(); // Call once on page load to highlight the correct section
 });
 
 document.querySelectorAll(".skill-card").forEach(card => {
@@ -74,3 +101,8 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+function toggleMenu() {
+    const navLinks = document.querySelector(".nav-links");
+    navLinks.classList.toggle("active");
+}

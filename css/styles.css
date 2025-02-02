@@ -169,18 +169,25 @@ h1 span {
     color: #00ffcc;
 }
 
+.logo a {
+    font-size: 22px;
+    font-weight: bold;
+    color: #00ffcc;
+    text-decoration: none;
+}
+
 /* Navigation List */
-nav ul {
+.nav-links {
     list-style: none;
     display: flex;
     gap: 25px;
 }
 
-nav ul li {
+.nav-links li {
     display: inline;
 }
 
-nav ul li a {
+.nav-links li a {
     color: white;
     text-decoration: none;
     font-weight: 500;
@@ -188,66 +195,72 @@ nav ul li a {
 }
 
 /* Hover Effect */
-nav ul li a:hover {
+.nav-links li a:hover {
     color: #00ffcc;
 }
 
-nav ul li a.active {
+/* Active Page */
+.nav-links li a.active {
     color: #00ffcc;
     font-weight: bold;
     text-decoration: underline;
 }
 
+/* Hamburger Menu */
+.hamburger {
+    display: none; /* Default hidden for larger screens */
+    font-size: 1.8rem;
+    color: white;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
 /* Skills Section */
 #Skills {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
     padding: 6rem 2rem; /* Increased padding */
     text-align: center;
 }
 
-
-/* Skills Container */
-#skills-container{
-    flex-grow: 1;
+/* Section Title */
+#Skills h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+/* Category Titles */
+.skills-category {
+    margin-bottom: 2rem;
 }
 
+.skills-category h3 {
+    font-size: 1.8rem;
+    color: #00ffcc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* 🔹 Grid Layout for Larger Screens */
 .skills-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 40px;
-    max-width: 900px; /* Increased width */
+    max-width: 900px;
     margin: auto;
 }
 
-.skills-category {
-    max-width: 800px;
-    text-align: left;
-    margin-bottom: 40px;
-}
-
-/* Category Title */
-.skills-category h3 {
-    font-size: 24px;
-    color: #00ffcc;
-    margin-bottom: 15px;
-}
-
-/* Skill Cards Grid */
+/* 🔹 Skill Grid */
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Wider cards */
-    gap: 20px; /* Increase spacing */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Auto-resizing grid */
+    gap: 20px;
     justify-content: center;
     align-items: center;
-    width: 100%;
 }
 
-
-/* Individual Skill Card */
+/* 🟢 Skill Cards */
 .skill-card {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(12px);
@@ -257,13 +270,23 @@ nav ul li a.active {
     font-weight: bold;
     text-align: center;
     box-shadow: 0px 5px 15px rgba(0, 255, 204, 0.2);
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 1.2rem;
 }
 
 /* Hover Effect */
 .skill-card:hover {
     transform: translateY(-5px);
     box-shadow: 0px 5px 25px rgba(0, 255, 204, 0.5);
+}
+
+/* 🟢 Skill Icons */
+.skill-card i {
+    font-size: 1.5rem;
 }
 
 /* Education Section */
@@ -343,7 +366,7 @@ nav ul li a.active {
     align-items: center;
     gap: 2.5rem;
     max-width: 1000px;
-    margin: 0 auto 4rem auto; /* Added bottom margin for spacing between projects */
+    margin: 0 auto 4rem auto;
     transition: transform 0.3s ease-in-out;
 }
 
@@ -356,7 +379,7 @@ nav ul li a.active {
     position: relative;
     width: 100%;
     max-width: 900px;
-    height: 500px; /* Maintain uniformity */
+    height: 450px; /* Adjusted height for better proportion */
     overflow: hidden;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 255, 170, 0.3);
@@ -378,12 +401,12 @@ nav ul li a.active {
     border-radius: 12px;
 }
 
-/* Carousel Buttons */
+/* 🔹 Carousel Navigation Buttons */
 .prev, .next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.6);
     color: white;
     border: none;
     padding: 12px;
@@ -425,7 +448,7 @@ nav ul li a.active {
 }
 
 .btn-primary, .btn-secondary {
-    padding: 1rem 1.8rem;
+    padding: 1rem 2rem;
     font-size: 1rem;
     border-radius: 8px;
     color: white;
@@ -447,6 +470,67 @@ nav ul li a.active {
 
 .btn-secondary:hover {
     background: #777;
+}
+
+/* 📌 Contact Section */
+#Contact {
+    text-align: center;
+    padding: 6rem 2rem;
+    color: white;
+}
+
+/* Section Title */
+#Contact h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* 🔹 Contact Container */
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 600px;
+    margin: auto;
+}
+
+/* 🔹 Individual Contact Cards */
+.contact-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    text-align: center;
+    box-shadow: 0px 5px 15px rgba(0, 255, 204, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: center;
+}
+
+/* Hover Effect */
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 5px 25px rgba(0, 255, 204, 0.5);
+}
+
+/* 🔹 Contact Icons */
+.contact-card i {
+    font-size: 1.5rem;
+    color: #00ffcc;
+}
+
+/* 🔹 Contact Links */
+.contact-card a {
+    color: #00ffcc;
+    text-decoration: none;
+}
+
+.contact-card a:hover {
+    text-decoration: underline;
 }
 
 
@@ -512,7 +596,12 @@ nav ul li a.active {
         text-align: center;
     }
     .skills-grid {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* 2 columns on tablets */
+        grid-template-columns: 1fr; /* Stack in a single column on small screens */
+    }
+
+    .skill-card {
+        font-size: 1rem;
+        padding: 15px;
     }
     .timeline-item {
         flex-direction: column;
@@ -523,22 +612,84 @@ nav ul li a.active {
     .school-logo {
         width: 80px;
     }
+    .projects {
+        padding: 4rem 1rem;
+    }
+
+    .project-card {
+        max-width: 95%;
+        padding: 1.5rem;
+    }
+
+    .carousel-container {
+        height: 250px; /* Reduced height for mobile */
+    }
+
+    .project-details h3 {
+        font-size: 1.4rem;
+    }
+
+    .project-details p {
+        font-size: 0.9rem;
+    }
+
+    .project-links {
+        flex-direction: column; /* Stack buttons for better mobile view */
+    }
+
+    .btn-primary, .btn-secondary {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+        width: 100%;
+    }
+
+    .prev, .next {
+        font-size: 1.5rem;
+        padding: 10px;
+    }
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #111;
+        width: 100%;
+        text-align: center;
+        flex-direction: column;
+        display: none;
+        padding: 1rem 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    /* 🔥 Ensure Hamburger is Visible */
+    .hamburger {
+        display: block; /* Show on mobile */
+    }
+}
+
+/* 📌 Mobile & Tablet Adjustments */
+@media (max-width: 1024px) {
     .project-card {
         max-width: 90%;
         padding: 2rem;
     }
+
     .carousel-container {
         height: 350px;
     }
+
     .project-details h3 {
-        font-size: 1.5rem;
+        font-size: 1.6rem;
     }
+
     .project-details p {
         font-size: 1rem;
-    }
-    .btn-primary, .btn-secondary {
-        padding: 0.8rem 1.5rem;
-        font-size: 0.9rem;
     }
 }
 
