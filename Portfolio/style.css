@@ -1,0 +1,105 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    min-height: 100vh;
+}
+
+nav {
+    width: 220px;
+    background: #f3f3f3;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* nav ul li:hover{
+    text-align: end;
+    background-color: #acacac;
+} */
+
+main {
+    flex: 1; 
+}
+
+main section h1{
+    margin: 0;
+}
+
+/* main section:nth-child(1){
+    min-height: 100vh;
+    background-color: #f2f2f2;
+} */
+
+main section{
+    height: clamp(100vh, 100vh, 100vh);
+    background-color: #f2f2f2;
+}
+
+/* main section:nth-child(1) .home {
+    min-height: 100vh;
+}
+
+main section:nth-child(2) .about-me,
+main section:nth-child(3) .work-experience {
+    min-height: 50vh;
+} */
+
+
+main section:nth-child(1) .home,
+main section:nth-child(2) .about-me {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main section:nth-child(1) .home div,
+main section:nth-child(2) .about-me div {
+    display: block;
+    width: 50%;
+}
+
+main section:nth-child(1) .home .text-holder {
+    width: 250px;
+    height: 250px;
+}
+
+main section:nth-child(1) .home .image-holder,
+main section:nth-child(2) .about-me .image-holder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main section:nth-child(1) .home .image-holder .image-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main section:nth-child(1) .home .image-holder img,
+main section:nth-child(2) .about-me .image-holder img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(100vh / 1.6 / 1.6);
+    height: calc(width / 1.6);
+}   
+
+/* footer {
+    position: fixed;
+    bottom: 0;
+    left: 220px;
+    right: 0;
+    padding: 10px;
+    background: #ddd;
+} */
