@@ -1,0 +1,769 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Background with a soft gradient */
+html,body {
+    min-height: 100vh;
+    height: auto;
+    background: linear-gradient(to bottom, #0f0f0f, #1e1e1e);
+    color: white;
+}
+
+section {
+    width: 100%;
+    text-align: center;
+    padding: 60px 10%;
+    color: white;
+}
+
+/* About Me Section */
+#About {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6rem 2rem;
+}
+
+.about-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* Glassmorphic Card */
+.about-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    padding: 3rem;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+    max-width: 700px; /* Increased width */
+    box-shadow: 0 8px 32px rgba(0, 255, 170, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+@keyframes floatAnimation {
+    0% { transform: translateY(0px); }
+    100% { transform: translateY(10px); }
+}
+
+.about-card:hover {
+    transform: translate(-5px);
+}
+
+/* Profile Image */
+.profile-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid white;
+    margin-bottom: 15px;
+}
+
+
+/* Headings */
+h1 {
+    font-size: 32px;
+    font-weight: bold;
+}
+h1 span {
+    color: #00ffcc;
+}
+
+/* Subtitle */
+.subtitle {
+    font-size: 18px;
+    color: #b3b3b3;
+}
+
+/* Location */
+.location {
+    font-size: 16px;
+    margin-top: 10px;
+    color: #d4d4d4;
+}
+
+/* Buttons */
+.buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+/* Button Styling */
+.btn {
+    text-decoration: none;
+    padding: 12px 18px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    box-shadow: 0 0 15px rgba(0, 255, 204, 0.7);
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
+
+/* Glassmorphic Download Button */
+.download-btn {
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    color: white;
+}
+.download-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Contact Me Button */
+.contact-btn {
+    background: #00ffcc;
+    color: black;
+    border: none;
+}
+.contact-btn:hover {
+    background: #00d4aa;
+}
+
+/* Navbar Styling */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Logo */
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #00ffcc;
+}
+
+.logo a {
+    font-size: 22px;
+    font-weight: bold;
+    color: #00ffcc;
+    text-decoration: none;
+}
+
+/* Navigation List */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+/* Hover Effect */
+.nav-links li a:hover {
+    color: #00ffcc;
+}
+
+/* Active Page */
+.nav-links li a.active {
+    color: #00ffcc;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none; /* Default hidden for larger screens */
+    font-size: 1.8rem;
+    color: white;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+/* Skills Section */
+#Skills {
+    align-items: center;
+    padding: 6rem 2rem; /* Increased padding */
+    text-align: center;
+}
+
+/* Section Title */
+#Skills h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+/* Category Titles */
+.skills-category {
+    margin-bottom: 2rem;
+}
+
+.skills-category h3 {
+    font-size: 1.8rem;
+    color: #00ffcc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* 🔹 Grid Layout for Larger Screens */
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 900px;
+    margin: auto;
+}
+
+/* 🔹 Skill Grid */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Auto-resizing grid */
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 🟢 Skill Cards */
+.skill-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 12px;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0px 5px 15px rgba(0, 255, 204, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 1.2rem;
+}
+
+/* Hover Effect */
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 5px 25px rgba(0, 255, 204, 0.5);
+}
+
+/* 🟢 Skill Icons */
+.skill-card i {
+    font-size: 1.5rem;
+}
+
+/* Education Section */
+/* Education Section - Dark Mode */
+.education {
+    text-align: center;
+    padding: 6rem 2rem;
+    color: #fff;
+}
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 900px;
+    margin: 1rem auto auto;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: center;
+    gap: 2rem; /* Increased spacing */
+    background: #1a1a1a;
+    padding: 3rem;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0, 255, 170, 0.3);
+    transition: transform 0.3s ease-in-out;
+}
+
+.timeline-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 18px rgba(0, 255, 170, 0.5);
+}
+
+.school-logo {
+    width: 100px; /* Increased logo size */
+    height: auto;
+    object-fit: contain;
+    filter: brightness(1.2);
+}
+
+.timeline-content {
+    text-align: left;
+}
+
+.timeline-content h3 {
+    font-size: 1.8rem;
+    color: #0ef; /* Cyan to match the modern neon style */
+}
+
+.timeline-content p {
+    font-size: 1.2rem;
+    color: #aaa; /* Light grey for readability */
+    margin-top: 0.5rem;
+}
+
+/* Projects Section */
+.projects {
+    text-align: center;
+    padding: 6rem 2rem;
+    color: white;
+}
+
+.projects h2, #Skills h2, .education h2 {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+
+/* Project Card */
+.project-card {
+    background: #1a1a1a;
+    border-radius: 15px;
+    box-shadow: 0 0 12px rgba(0, 255, 170, 0.3);
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+    max-width: 1000px;
+    margin: 0 auto 4rem auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Project Carousel */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    height: 450px; /* Adjusted height for better proportion */
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 255, 170, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ensures the entire image is visible without being cut */
+    border-radius: 12px;
+}
+
+/* 🔹 Carousel Navigation Buttons */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    font-size: 1.8rem;
+    border-radius: 5px;
+}
+
+.prev {
+    left: 15px;
+}
+
+.next {
+    right: 15px;
+}
+
+/* Project Details */
+.project-details {
+    text-align: center;
+    max-width: 850px;
+}
+
+.project-details h3 {
+    font-size: 2rem;
+    color: #0ef;
+}
+
+.project-details p {
+    font-size: 1.2rem;
+    color: #aaa;
+    margin-top: 0.5rem;
+}
+
+/* Project Buttons */
+.project-links {
+    display: flex;
+    gap: 1.2rem;
+    margin-top: 1.5rem;
+}
+
+.btn-primary, .btn-secondary {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    color: white;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.btn-primary {
+    background: #0ef;
+}
+
+.btn-primary:hover {
+    background: #0bc;
+}
+
+.btn-secondary {
+    background: #555;
+}
+
+.btn-secondary:hover {
+    background: #777;
+}
+
+/* 📌 Contact Section */
+#Contact {
+    text-align: center;
+    padding: 6rem 2rem;
+    color: white;
+}
+
+/* Section Title */
+#Contact h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* 🔹 Contact Container */
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 600px;
+    margin: auto;
+}
+
+/* 🔹 Individual Contact Cards */
+.contact-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    text-align: center;
+    box-shadow: 0px 5px 15px rgba(0, 255, 204, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: center;
+}
+
+/* Hover Effect */
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 5px 25px rgba(0, 255, 204, 0.5);
+}
+
+/* 🔹 Contact Icons */
+.contact-card i {
+    font-size: 1.5rem;
+    color: #00ffcc;
+}
+
+/* 🔹 Contact Links */
+.contact-card a {
+    color: #00ffcc;
+    text-decoration: none;
+}
+
+.contact-card a:hover {
+    text-decoration: underline;
+}
+
+
+/* 📱 Mobile (Smartphones - up to 480px) */
+@media (max-width: 480px) {
+    .about-card {
+        max-width: 95%; 
+        padding: 20px;
+    }
+    h1 {
+        font-size: 20px;
+    }
+    .buttons {
+        flex-direction: column;
+    }
+    .btn {
+        width: 100%;
+    }
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+    .timeline-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 1.5rem;
+    }
+    .school-logo {
+        width: 60px; /* Reduce size for better mobile fitting */
+    }
+    .project-card {
+        max-width: 95%;
+        padding: 1.5rem;
+    }
+    .carousel-container {
+        height: 250px;
+    }
+    .project-details h3 {
+        font-size: 1.3rem;
+    }
+    .project-details p {
+        font-size: 0.9rem;
+    }
+    .btn-primary, .btn-secondary {
+        padding: 0.7rem 1.2rem;
+        font-size: 0.85rem;
+    }
+}
+
+/* 📱 Tablets (480px - 768px) */
+@media (max-width: 768px) {
+    .about-card {
+        max-width: 90%;
+        padding: 30px;
+    }
+    h1 {
+        font-size: 24px;
+    }
+    .buttons {
+        flex-direction: column;
+    }
+    .skills-category {
+        text-align: center;
+    }
+    .skills-grid {
+        grid-template-columns: 1fr; /* Stack in a single column on small screens */
+    }
+
+    .skill-card {
+        font-size: 1rem;
+        padding: 15px;
+    }
+    .timeline-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 2rem;
+    }
+    .school-logo {
+        width: 80px;
+    }
+    .projects {
+        padding: 4rem 1rem;
+    }
+
+    .project-card {
+        max-width: 95%;
+        padding: 1.5rem;
+    }
+
+    .carousel-container {
+        height: 250px; /* Reduced height for mobile */
+    }
+
+    .project-details h3 {
+        font-size: 1.4rem;
+    }
+
+    .project-details p {
+        font-size: 0.9rem;
+    }
+
+    .project-links {
+        flex-direction: column; /* Stack buttons for better mobile view */
+    }
+
+    .btn-primary, .btn-secondary {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+        width: 100%;
+    }
+
+    .prev, .next {
+        font-size: 1.5rem;
+        padding: 10px;
+    }
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #111;
+        width: 100%;
+        text-align: center;
+        flex-direction: column;
+        display: none;
+        padding: 1rem 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    /* 🔥 Ensure Hamburger is Visible */
+    .hamburger {
+        display: block; /* Show on mobile */
+    }
+}
+
+/* 📌 Mobile & Tablet Adjustments */
+@media (max-width: 1024px) {
+    .project-card {
+        max-width: 90%;
+        padding: 2rem;
+    }
+
+    .carousel-container {
+        height: 350px;
+    }
+
+    .project-details h3 {
+        font-size: 1.6rem;
+    }
+
+    .project-details p {
+        font-size: 1rem;
+    }
+}
+
+/* 💻 Laptops & Medium Screens (768px - 1200px) */
+@media (max-width: 1200px) {
+    .about-card {
+        max-width: 80%;
+        padding: 3rem;
+    }
+    h1 {
+        font-size: 28px;
+    }
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Dynamic fitting */
+    }
+    .timeline {
+        max-width: 90%;
+    }
+    .timeline-item {
+        flex-direction: row;
+        align-items: center;
+        padding: 2.5rem;
+    }
+    .school-logo {
+        width: 90px;
+    }
+    .project-card {
+        max-width: 85%;
+        padding: 2.5rem;
+    }
+    .carousel-container {
+        height: 400px;
+    }
+    .project-details h3 {
+        font-size: 1.8rem;
+    }
+    .project-details p {
+        font-size: 1.1rem;
+    }
+}
+
+/* 🖥️ Large Screens & Ultra-wide Monitors (Above 1200px) */
+@media (min-width: 1200px) {
+    .about-card {
+        max-width: 70%;
+        padding: 4rem;
+    }
+    h1 {
+        font-size: 32px;
+    }
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+    .timeline {
+        max-width: 75%;
+    }
+    .timeline-item {
+        padding: 3rem;
+    }
+    .school-logo {
+        width: 100px;
+    }
+    .project-card {
+        max-width: 75%;
+        padding: 3rem;
+    }
+    .carousel-container {
+        height: 500px;
+    }
+    .project-details h3 {
+        font-size: 2rem;
+    }
+    .project-details p {
+        font-size: 1.2rem;
+    }
+}
+

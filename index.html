@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Me - Gerome Ian</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/project-section.css" />
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <div class="logo">
+          <a href="#">Gerome Ian</a>
+      </div>
+      <ul class="nav-links">
+          <li><a href="#About">About</a></li>
+          <li><a href="#Skills">Skills</a></li>
+          <li><a href="#Education">Education</a></li>
+          <li><a href="#Projects">Projects</a></li>
+          <li><a href="#Contact">Contact</a></li>
+      </ul>
+
+      <!-- Hamburger Icon -->
+      <div class="hamburger" onclick="toggleMenu()">
+          <i class="fas fa-bars"></i>
+      </div>
+  </nav>
+    <section id="About">
+      <div class="about-card">
+        <img src="assets/gerome_ian.jpg" alt="Gerome Ian" class="profile-img" />
+        <h1>👋 Hey, I'm <span>Gerome Ian</span></h1>
+        <p class="subtitle">
+          💻 Software Engineer | Passionate about problem-solving & tech
+        </p>
+        <p class="location">📍 Baguio City, Philippines</p>
+        <div class="buttons">
+          <a href="assets/resume.pdf" class="btn download-btn"
+            >📂 Download Resume</a
+          >
+          <a href="#contact" class="btn contact-btn">📩 Contact Me</a>
+        </div>
+      </div>
+    </section>
+    <!-- 🛠 Skills Section Below -->
+    <section id="Skills">
+      <h2>🛠 My Skills</h2>
+      <div class="skills-container">
+        <!-- Personal Skills -->
+        <div class="skills-category">
+          <h3>💡 Personal Skills</h3>
+          <div class="skills-grid">
+            <div class="skill-card">🧠 Critical Thinking</div>
+            <div class="skill-card">🛠 Problem Solving</div>
+          </div>
+        </div>
+        <!-- Technical Skills -->
+        <div class="skills-category">
+          <h3>💻 Technical Skills</h3>
+          <div class="skills-grid">
+            <div class="skill-card">🎨 HTML / CSS / JavaScript</div>
+            <div class="skill-card">📦 Bootstrap / jQuery</div>
+            <div class="skill-card">⚙ Java / Spring Boot / Spring MVC</div>
+            <div class="skill-card">🖥️ PHP / Laravel</div>
+            <div class="skill-card">🔄 Git / GitHub</div>
+            <div class="skill-card">🗄 MySQL</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="education" id="Education">
+      <h2>🎓 Education</h2>
+      <div class="timeline">
+        <!-- University of Baguio -->
+        <div class="timeline-item">
+          <img
+            src="assets/UB-LOGO-webmail.png"
+            alt="University of Baguio Logo"
+            class="school-logo"
+          />
+          <div class="timeline-content">
+            <h3>🏫 University of Baguio</h3>
+            <p>
+              <strong>📖 Course:</strong> Bachelor of Science in Computer
+              Science - Applied Software Engineering (BSCS-ASE)
+            </p>
+            <p><strong>📅 Year Started:</strong> 2023 - Present</p>
+          </div>
+        </div>
+        <!-- Lithan Academy -->
+        <div class="timeline-item">
+          <img
+            src="assets/02-EduCLaaS-Logo-Raspberry-300x94.png"
+            alt="Lithan Academy Logo"
+            class="school-logo"
+          />
+          <div class="timeline-content">
+            <h3>🏫 Lithan Academy</h3>
+            <p>
+              <strong>📖 Course:</strong> Bachelor of Software Engineering
+              (BDSE)
+            </p>
+            <p><strong>📅 Year Started:</strong> 2023 - Present</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="projects" id="Projects">
+      <h2>🛠️ Projects</h2>
+      <div class="project-card">
+        <div class="carousel-container">
+          <div class="carousel">
+            <img
+              src="assets/import_csv_page.png"
+              alt="Contact Management System Image 1"
+            />
+            <img
+            src="assets/contact-listing-page.png"
+              alt="Contact Management System Image 2"
+            />
+          </div>
+          <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+          <button class="next" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+        <div class="project-details">
+          <h3>📇 Contact Management System</h3>
+          <p>
+            A system where users can **import CSV files** containing user
+            details like name, email, and phone number. The system **validates
+            the data**, **identifies invalid entries**, and returns a CSV file
+            with errors. Additionally, users can **store valid contacts in
+            HubSpot** along with custom properties.
+          </p>
+          <p>
+            <strong>🖥️ Environment:</strong> PHP, Laravel, Bootstrap, jQuery,
+            JavaScript, HubSpot API, Micorsoft 0Auth
+          </p>
+          <p>
+            <strong>⚙️ Tech Stack:</strong> PHP, Laravel, JavaScript
+          </p>
+          <div class="project-links">
+            <a href="#" class="btn-primary">🔗 View Project</a>
+            <a href="#" class="btn-secondary">📂 GitHub Repo</a>
+          </div>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="carousel-container">
+            <div class="carousel">
+                <img src="assets/landing-page.png" alt="Proposal Management AI App Image 1">
+                <img src="assets/proposal-list-page.png" alt="Proposal Management AI App Image 2">
+            </div>
+            <button class="prev" onclick="moveSlide(-1, 1)">&#10094;</button>
+            <button class="next" onclick="moveSlide(1, 1)">&#10095;</button>
+        </div>
+        <div class="project-details">
+            <h3>🤖 Proposal Management AI App</h3>
+            <p>
+                A smart proposal generation system for **Small Medium Enterprises (SMEs)**. 
+                Users fill out a **form**, and based on their responses, the system **automatically generates a proposal**. 
+                Sales agents can **review, edit, and send the proposal** directly to the client’s email. 
+                This app **leverages ChatGPT API** to generate dynamic proposal content.
+            </p>
+    
+            <p><strong>🖥️ Environment:</strong> PHP, Laravel, Bootstrap, jQuery, JavaScript, ChatGPT API</p>
+            
+            <p><strong>⚙️ Tech Stack:</strong> PHP, Laravel, JavaScript, AI Text Generation (ChatGPT API)</p>
+    
+            <div class="project-links">
+                <a href="#" class="btn-primary">🔗 View Project</a>
+                <a href="#" class="btn-secondary">📂 GitHub Repo</a>
+            </div>
+        </div>
+    </div>
+    </section>
+    <section id="Contact">
+      <h2>📩 Contact</h2>
+      <div class="contact-container">
+          <div class="contact-card">
+              <i class="fas fa-envelope"></i>
+              <p><strong>Email:</strong> <a href="mailto:gerome5252005@gmail.com">gerome5252005@gmail.com</a></p>
+          </div>
+  
+          <div class="contact-card">
+              <i class="fas fa-phone-alt"></i>
+              <p><strong>Phone:</strong> <a href="tel:+9478194875">+947 819 4875</a></p>
+          </div>
+  
+          <div class="contact-card">
+              <i class="fas fa-map-marker-alt"></i>
+              <p><strong>Location:</strong> Baguio City, Philippines</p>
+          </div>
+      </div>
+  </section>
+    <footer class="footer"></footer>
+    <script src="js/index.js"></script>
+    <script src="js/carousel.js"></script>
+    <script src="https://kit.fontawesome.com/4d2a01d4ef.js" crossorigin="anonymous"></script>
+  </body>
+</html>
