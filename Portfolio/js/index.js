@@ -22,7 +22,7 @@
         firstListItem.style.justifyContent = "space-between";
 
         items.forEach(item => {
-        item.style.display = "inline";
+        item.style.display = "block";
         });
 
         navTexts.forEach(item => {
@@ -50,7 +50,7 @@
         firstListItem.style.justifyContent = "center";
 
         items.forEach(item => {
-            item.style.display = "inline";
+            item.style.display = "block";
         });
 
         navTexts.forEach(item => {
