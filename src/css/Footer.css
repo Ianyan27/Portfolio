@@ -1,0 +1,15 @@
+.footer {
+  border-top: 0.5px solid #e0e0e0;
+  padding: 1.5rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-copy,
+.footer-built {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: #bbb;
+  letter-spacing: 0.04em;
+}

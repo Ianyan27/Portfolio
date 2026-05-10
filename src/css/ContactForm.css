@@ -1,0 +1,89 @@
+.contact-form-wrapper {
+  flex: 1;
+  min-width: 280px;
+}
+
+.contact-form-heading {
+  font-family: 'DM Serif Display', serif;
+  font-size: 24px;
+  font-weight: 400;
+  color: #2a2a2a;
+  margin: 0 0 2rem;
+  letter-spacing: -0.01em;
+}
+
+.form-success {
+  font-family: 'DM Mono', monospace;
+  font-size: 12px;
+  color: #555;
+  border: 0.5px solid #c8c8c8;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1.5rem;
+  border-radius: 2px;
+  background: #f8f8f8;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-group label {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: #aaa;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.form-group input,
+.form-group textarea {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  color: #2a2a2a;
+  background: #fff;
+  border: 0.5px solid #c8c8c8;
+  border-radius: 2px;
+  padding: 0.7rem 1rem;
+  outline: none;
+  transition: border-color 0.2s;
+  resize: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #ccc;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #888;
+}
+
+.form-submit {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  background: #2a2a2a;
+  color: #fafafa;
+  border: none;
+  padding: 0.85rem 1.5rem;
+  border-radius: 2px;
+  cursor: pointer;
+  width: 100%;
+  transition: background 0.2s;
+}
+
+.form-submit:hover {
+  background: #1a1a1a;
+}
