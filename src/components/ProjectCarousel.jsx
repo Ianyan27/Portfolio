@@ -5,36 +5,48 @@ import '../css/ProjectCarousel.css'
 const projects = [
   {
     id: 1,
-    title: 'DevTrack',
+    title: 'Contact Management System',
     description:
-      'A project management system built for small dev teams. Features task boards, sprint planning, and real-time progress tracking.',
-    stack: ['React', 'Node.js', 'Express', 'PostgreSQL'],
+      'A contact management application integrated with the HubSpot API, allowing users to manage, import, export, and view contacts through a tabular interface. Designed to simplify customer and contact data management for teams and businesses.',
+    stack: [
+      'PHP Laravel',
+      'Bootstrap 5',
+      'JavaScript',
+      'Microsoft OAuth',
+      'HubSpot API',
+    ],
     github: '#',
     demo: '#',
     caseStudy: '#',
-    imagePlaceholder: 'DevTrack — Project Management',
+    imagePlaceholder: 'Contact Management System — HubSpot Integration',
   },
   {
     id: 2,
-    title: 'ShopLite',
+    title: 'Ticketing System',
     description:
-      'A lightweight e-commerce platform with product catalog, cart management, and order tracking for small businesses.',
-    stack: ['Next.js', 'Laravel', 'MySQL', 'Tailwind'],
+      'A ticket management system integrated with the ClickUp API, where users can submit and monitor tickets directly through the application. Instead of storing tickets in a local database, all ticket data is synchronized and managed within ClickUp.',
+    stack: [
+      'PHP Laravel',
+      'Bootstrap 5',
+      'JavaScript',
+      'Microsoft OAuth',
+      'ClickUp API',
+    ],
     github: '#',
     demo: '#',
-    caseStudy: null,
-    imagePlaceholder: 'ShopLite — E-Commerce',
+    caseStudy: '#',
+    imagePlaceholder: 'Ticketing System — ClickUp Integration',
   },
   {
     id: 3,
-    title: 'BarangayConnect',
+    title: 'Upcoming Project',
     description:
-      'A community information portal for local government units, featuring resident registration and announcements.',
-    stack: ['PHP', 'JavaScript', 'MySQL', 'Bootstrap'],
-    github: '#',
+      'Currently in planning and development. More details and features will be added soon.',
+    stack: [],
+    github: null,
     demo: null,
-    caseStudy: '#',
-    imagePlaceholder: 'BarangayConnect — Gov Portal',
+    caseStudy: null,
+    imagePlaceholder: 'New Project — Coming Soon',
   },
 ]
 

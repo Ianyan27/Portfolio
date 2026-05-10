@@ -54,12 +54,12 @@ function HeroSection() {
 
         <div className="hero-stats">
           <div className="stat">
-            <span className="stat-num">3+</span>
+            <span className="stat-num">1+</span>
             <span className="stat-label">Years Experience</span>
           </div>
           <div className="stat-divider" />
           <div className="stat">
-            <span className="stat-num">12+</span>
+            <span className="stat-num">7+</span>
             <span className="stat-label">Projects Built</span>
           </div>
           <div className="stat-divider" />

@@ -83,7 +83,8 @@
 }
 
 .project-actions {
-  display: flex;
+  /* display: flex; */
+  display: none;
   gap: 0.6rem;
   flex-wrap: wrap;
 }
