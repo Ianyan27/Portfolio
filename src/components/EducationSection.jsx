@@ -15,7 +15,7 @@ const education = [
     id: 2,
     type: 'College',
     school: 'University of the Baguio',
-    years: '2020 – 2024',
+    years: '2022 – Present',
     program: 'Bachelor of Applied Software Engineering',
     description:
       'Pursuing a degree in Applied Software Engineering, with coursework covering software development, data structures, algorithms, and project management. Engaged in various projects and internships that provided real-world experience in building web applications and collaborating in team environments.',
