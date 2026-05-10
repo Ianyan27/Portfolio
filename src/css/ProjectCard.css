@@ -63,6 +63,7 @@
   color: #777;
   line-height: 1.75;
   margin: 0 0 1.25rem;
+  min-height: 150px;
 }
 
 .project-stack {

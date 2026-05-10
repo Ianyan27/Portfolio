@@ -47,21 +47,25 @@ section {
 
 #about{
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 1rem;
-
   border-bottom: 0.5px solid #e8e8e8;
   padding-top: 1rem;
 }
 
-#about > div:nth-child(3) {
-  grid-column: 1 / -1;
+#about .section-inner:nth-child(1) {
+  max-width: 750px;
+  width: 100%;
+  margin: auto;
 }
 
 #about .section-inner:not(:nth-child(3)) {
-  max-width: 680px;
-  width: 100%;
-  padding: 0 2rem;
+  max-height: 500px;
+  height: 100%;
+}
+
+#about .section-inner:not(:nth-child(3)) {
+  padding: 0 4rem;
 }
 #about .section-inner:nth-child(3) {
   width: 100%;
@@ -100,3 +104,4 @@ section {
     gap: 3rem;
   }
 }
+
