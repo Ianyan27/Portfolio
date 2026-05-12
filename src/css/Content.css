@@ -2,7 +2,9 @@
    Content Layout
    ============================================= */
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -45,7 +47,7 @@ section {
   padding-top: 1rem;
 }
 
-#about{
+#about {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
@@ -77,6 +79,7 @@ section {
 #contact .section-inner {
   max-width: 650px;
   width: 100%;
+  justify-content: center;
 }
 .contact-inner {
   display: flex;
@@ -89,17 +92,19 @@ section {
 /* =============================================
    Responsive
    ============================================= */
+/* ─── MOBILE (base, up to 768px) ─────────────────────────────────────────── */
+/* Your existing styles stay as-is */
 
 @media (max-width: 768px) {
   .content {
     grid-template-columns: 1fr;
   }
 
-  .section-inner:not(.about-inner){
+  .section-inner:not(.about-inner) {
     padding: 0 1.25rem;
     width: 700px;
   }
-  
+
   .section-inner.about-inner {
     padding: 0 1.25rem;
   }
@@ -135,8 +140,138 @@ section {
   }
 }
 
-@media (min-width: 1440px) {
+/* ─── TABLET (769px – 1024px) ────────────────────────────────────────────── */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .content {
+    grid-template-columns: 200px 1fr; /* narrow sidebar */
+    gap: 1.5rem;
+  }
+
+  .section-inner:not(.about-inner) {
+    padding: 0 2rem;
+    width: 100%; /* let it flow instead of being fixed */
+  }
+
+  .section-inner.about-inner {
+    padding: 0 2rem;
+  }
+
+  .about-inner {
+    grid-template-columns: 1fr 1fr; /* two-col on tablet */
+    gap: 1.5rem;
+  }
+
   .about-content {
-    max-width: 600px;
+    width: 100%;
+  }
+
+  .contact-inner {
+    flex-direction: column; /* still stacked on tablet */
+    gap: 2rem;
+  }
+
+  .contact-socials {
+    width: 150px;
+    margin: auto;
+  }
+
+  .project-card {
+    flex: 0 0 100%; /* show a peek of the next card */
+  }
+
+  .carousel-track {
+    max-width: 100%;
+  }
+
+  .edu-card-left {
+    padding-top: 16px;
+  }
+}
+
+/* ─── SMALL LAPTOP (1025px – 1280px) ─────────────────────────────────────── */
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .content {
+    grid-template-columns: 240px 1fr; /* slightly wider sidebar */
+    gap: 2rem;
+  }
+
+  .section-inner:not(.about-inner) {
+    padding: 0 2.5rem;
+    width: 100%;
+  }
+
+  .section-inner.about-inner {
+    padding: 0 2.5rem;
+  }
+
+  .about-inner {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .about-content {
+    max-width: 520px;
+  }
+
+  .contact-inner {
+    flex-direction: row; /* side-by-side from laptop up */
+    gap: 3rem;
+    align-items: flex-start;
+  }
+
+  .contact-socials {
+    width: 160px;
+  }
+
+  .project-card {
+    flex: 0 0 100%; /* two cards visible */
+  }
+
+  .carousel-track {
+    max-width: 100%;
+  }
+
+  .edu-card-left {
+    padding-top: 0;
+  }
+}
+
+/* ─── LARGE DESKTOP (1281px – 1439px) ────────────────────────────────────── */
+@media (min-width: 1281px) and (max-width: 1439px) {
+  .content {
+    grid-template-columns: 260px 1fr;
+    gap: 2.5rem;
+  }
+
+  .section-inner:not(.about-inner) {
+    padding: 0 3rem;
+    width: 100%;
+  }
+
+  .section-inner.about-inner {
+    padding: 0 3rem;
+  }
+
+  .about-inner {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+
+  .about-content {
+    max-width: 560px;
+  }
+
+  .contact-inner {
+    flex-direction: row;
+    gap: 4rem;
+    align-items: flex-start;
+  }
+
+  .contact-socials {
+    width: 180px;
+  }
+
+  .project-card {
+    flex: 0 0 40%;
   }
 }
